@@ -4,7 +4,7 @@ import smtplib
 
 #Main Screen Init
 master       = Tk()
-master.title = 'fastmail'
+master.title = 'DogeMail'
 
 #Functions
 def send():
@@ -25,7 +25,7 @@ def send():
             server.sendmail(username,to,finalMessage)
             notif.config(text="Email has been sent successfully", fg="green")
     except:
-        notif.config(text="visit myaccount.google.com/lesssecureapps and turn it on!and write correct info!", fg="red")
+        notif.config(text="please enter correct credentials or read the README file!", fg="red")
         
 
 
@@ -37,14 +37,14 @@ def reset():
   bodyEntry.delete(0,'end')
 
 #Labels
-Label(master, text="FastMail", font=('Helvetica',15)).grid(row=0, sticky=N)
-Label(master, text="Welcome to FastMail! Enter your correct credentials to send an email to someone!", font=('Calibri',11)).grid(row=1, sticky=W, padx=5 ,pady=10)
+Label(master, text="DogeMail", font=('Helvetica',15)).grid(row=0, sticky=N)
+Label(master, text="Welcome to DogeMail! Enter your correct credentials to send an email to someone!", font=('Calibri',11)).grid(row=1, sticky=W, padx=5 ,pady=10)
 
-Label(master, text="Email", font=('Calibri', 11)).grid(row=2,sticky=W, padx=5)
-Label(master, text="Password", font=('Calibri', 11)).grid(row=3,sticky=W, padx=5)
-Label(master, text="To", font=('Calibri', 11)).grid(row=4,sticky=W, padx=5)
-Label(master, text="Subject", font=('Helvetica', 11)).grid(row=5,sticky=W, padx=5)
-Label(master, text="Body", font=('Calibri', 11)).grid(row=6,sticky=W, padx=5)
+Label(master, text="Your Email:", font=('Calibri', 11)).grid(row=2,sticky=W, padx=5)
+Label(master, text="Password:", font=('Calibri', 11)).grid(row=3,sticky=W, padx=5)
+Label(master, text="To:", font=('Calibri', 11)).grid(row=4,sticky=W, padx=5)
+Label(master, text="Subject:", font=('Helvetica', 11)).grid(row=5,sticky=W, padx=5)
+Label(master, text="Body:", font=('Calibri', 11)).grid(row=6,sticky=W, padx=5)
 notif = Label(master, text="", font=('Calibri', 11),fg="red")
 notif.grid(row=7,sticky=S)
 
